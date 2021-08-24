@@ -1,7 +1,7 @@
 public class Printer {
 
     private int sheets;
-    private int printRequest;
+//    private int printRequest;
     private int tonerAmount;
 
     public Printer(int sheets, int tonerAmount){
@@ -14,10 +14,10 @@ public class Printer {
     }
 
     public void print(int pages, int copies){
-        printRequest = pages * copies;
+        int printRequest = pages * copies;
         if (printRequest <= this.sheets){
             this.sheets -= printRequest;
-            this.tonerAmount -= 1;
+            this.tonerAmount -= printRequest;
         }
     }
 

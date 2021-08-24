@@ -26,8 +26,8 @@ public class PrinterTest {
 
     @Test
     public void printingReducesTonerAmount(){
-        Printer printer1 = new Printer(20, 12);
+        Printer printer1 = new Printer(20, 30);
         printer1.print(3,6);
-        assertEquals(11, printer1.getTonerAmount());
+        assertEquals(12, printer1.getTonerAmount());
     }
 }
